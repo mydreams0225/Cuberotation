@@ -1,0 +1,61 @@
+
+        .wrapper{
+        	position: relative;
+        	top:200px;
+        	left: 200px;
+        	width: 200px;
+        	height: 200px;
+        	transform-style: preserve-3d;
+           
+            
+            animation: turn 5s linear infinite;
+        }
+        .wrapper div{
+        	width: 200px; 
+        	height: 200px;
+        	position: absolute;
+        	top: 0;
+        	left: 0;
+        	opacity: 0.9;
+        }
+        .item1{
+        	background-image: url(./img/pic1.png);
+        	transform: rotateY(0deg) translate3d(0,0,100px);
+        }
+         .item2{
+        	background-image: url(./img/pic2-1.png);
+        	transform: rotateY(90deg) translate3d(0,0,100px);
+        }
+         .item3{
+        	background-image: url(./img/pic2-2.png);
+        	transform: rotateY(180deg) translate3d(0,0,100px);
+        }
+         .item4{
+        	background-image: url(./img/pic2-3.png);
+        	transform: rotateY(270deg) translate3d(0,0,100px);
+        }
+         .item5{
+         	
+        	background-image: url(./img/pic2-4.png);
+            transform-origin: top;
+
+        	transform: rotatex(90deg) translate3d(0,-100px,0);
+        } .item6{
+        	background-image: url(./img/pic3.png);
+        	 transform-origin: bottom;
+        	transform: rotateX(90deg) translate3d(0,100px,0);
+        }
+        @keyframes turn{
+        	0%{
+        		transform-origin: top;
+        		 transform: rotateX(20deg) rotate3d(1,1,1,0deg);
+        	}
+        	50%{
+        		transform-origin: bottom;
+        		 transform: rotateX(20deg) rotate3d(4,1,1,180deg);
+        	}
+        	100%{
+        		transform-origin: -100px;
+        		transform: rotateX(20deg) rotate3d(1,1,0,360deg);
+        	}
+        }
